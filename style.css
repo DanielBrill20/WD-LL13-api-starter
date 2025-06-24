@@ -4,19 +4,36 @@ body {
   margin: 40px auto;
   padding: 20px;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #23272f; /* dark gray */
+  color: #e0e0e0; /* off white */
 }
 
 h1 {
   font-size: 1.8rem;
-  color: #333;
+  color: #e0e0e0;
 }
 
 #output {
   margin-top: 20px;
   padding: 15px;
-  border: 1px solid #ccc;
-  background-color: white;
+  background-color: #23272f; /* slightly lighter dark gray */
+  color: #e0e0e0;
   border-radius: 6px;
   min-height: 80px;
+  opacity: 1;
+}
+
+#star-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > *:not(#star-bg) {
+  position: relative;
+  z-index: 1;
 }
